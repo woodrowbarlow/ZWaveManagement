@@ -1,0 +1,34 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Set the thermostat's temperature point for a given thermostat mode. Temperature must be a number. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label for="%CONTROLNAME%_mode">Mode:</label>
+    <select name="mode" id="%CONTROLNAME%_mode" required>
+      <option value="all">All Modes</option>
+      <option value="0">Off</option>
+      <option value="1">Heating</option>
+      <option value="2">Cooling</option>
+      <option value="7">Furnace</option>
+      <option value="8">Dry Air</option>
+      <option value="9">Moist Air</option>
+      <option value="10">Auto Changeover</option>
+      <option value="11">Heating Economical</option>
+      <option value="12">Cooling Economical</option>
+      <option value="13">Away Heating</option>
+    </select><br>
+    <label for="%CONTROLNAME%_value">Temperature:</label>
+    <input type="number" name="value" id="%CONTROLNAME%_value" step="0.1" title="Input must be a number." required><br>
+    <label for="%CONTROLNAME%_scale">Scale:</label>
+    <select name="scale" id="%CONTROLNAME%_scale" required>
+      <option value="0">Degrees Celsius</option>
+      <option value="1">Degrees Fahrenheit</option>
+    </select><br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

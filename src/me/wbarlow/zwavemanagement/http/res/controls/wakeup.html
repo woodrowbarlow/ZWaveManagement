@@ -1,0 +1,15 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Sets the wake-up interval of a node, in seconds. Interval must be an integer. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label for="%CONTROLNAME%_interval">Interval:</label>
+    <input type="number" name="interval" id="%CONTROLNAME%_interval" step="1" title="Input must be an integer." required><br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

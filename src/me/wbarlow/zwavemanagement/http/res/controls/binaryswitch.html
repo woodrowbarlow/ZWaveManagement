@@ -1,0 +1,15 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Sets the value of a binary toggle switch. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label for="%CONTROLNAME%_value_on"><input type="radio" name="value" id="%CONTROLNAME%_value_on" value="255" required> On</label> <br>
+    <label for="%CONTROLNAME%_value_off"><input type="radio" name="value" id="%CONTROLNAME%_value_off" value="0" required> Off</label> <br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

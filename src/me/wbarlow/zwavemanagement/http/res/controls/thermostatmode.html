@@ -1,0 +1,30 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Sets the thermostat mode. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label for="%CONTROLNAME%_mode">Thermostat Mode:</label>
+    <select name="mode" id="%CONTROLNAME%_mode" required>
+      <option value="0">Off</option>
+      <option value="1">Heat</option>
+      <option value="2">Cool</option>
+      <option value="3">Auto</option>
+      <option value="4">Aux Heat</option>
+      <option value="5">Resume</option>
+      <option value="6">Fan Only</option>
+      <option value="7">Furnace</option>
+      <option value="8">Dry Air</option>
+      <option value="9">Moist Air</option>
+      <option value="10">Auto Changeover</option>
+      <option value="11">Heat Econ</option>
+      <option value="12">Cool Econ</option>
+      <option value="13">Away</option>
+    </select><br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

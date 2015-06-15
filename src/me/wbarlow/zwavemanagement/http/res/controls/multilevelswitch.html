@@ -1,0 +1,15 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Sets the level of a multi-level switch. Any value zero or below evaluates to "off". Level must be an integer. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label for="%CONTROLNAME%_value">Level:</label>
+    <input type="range" name="value" id="%CONTROLNAME%_value" step="1" min="0" max="255" title="Input must be an integer." required><br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

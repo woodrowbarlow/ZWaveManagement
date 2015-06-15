@@ -1,0 +1,19 @@
+<form action="?" method="get" class="%CONTROLNAME% control">
+  <fieldset>
+    <legend>%FRIENDLYCONTROLNAME% Control</legend>
+    <input type="hidden" name="node" id="%CONTROLNAME%_node" value="%NODEID%">
+    <input type="hidden" name="control" id="%CONTROLNAME%_control" value="%CONTROLNAME%">
+    <span class="description">
+      Sets or removes a node association group. Group Id and Node Id must be integers. 
+      <a href="?node=%NODEID%&control=%CONTROLNAME%&update">Click here</a> to update the cache value for this control.
+    </span><br>
+    <label><input type="radio" name="action" id="%CONTROLNAME%_action_set" value="set" required> Set</label> <br>
+    <label><input type="radio" name="action" id="%CONTROLNAME%_action_remove" value="remove" required> Remove</label> <br>
+    <label for="%CONTROLNAME%_assoc_group">Group Id:</label>
+    <input type="number" name="assoc_group" id="%CONTROLNAME%_assoc_group" step="1" title="Input must be an integer." required><br>
+    <label for="%CONTROLNAME%_assoc_node">Node Id:</label>
+    <input type="number" name="assoc_node" id="%CONTROLNAME%_assoc_node" step="1" title="Input must be an integer." required><br>
+    <input type="reset" id="%CONTROLNAME%_reset" value="Clear">
+    <input type="submit" id="%CONTROLNAME%_submit" value="Update">
+  </fieldset>
+</form>

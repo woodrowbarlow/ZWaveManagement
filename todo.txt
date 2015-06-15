@@ -1,0 +1,28 @@
+This is a list of minor problems which might need attention. These are
+considered pretty minor since this bundle is more about proof-of-concept than
+providing a final product. To see the big-picture goals, see the various readme
+files.
+
+There seems to be a resource leak somewhere. I suspect it is improperly utilized
+resources when I switched RxTx to jSSC. More specifically, I suspect it is a
+mis-use of the SerialInputStream / SerialOutputStream objects, which are not
+synchronized for use in threads.
+
+The bundle doesn't stop properly. The code does stop responding to input, but
+the bundle just kind of hangs before changing state.
+
+If you start the bundle without the controller plugged in, we need it to exit
+more gracefully. Currently it throws an NPE and crashes.
+
+Maybe we should have a "homepage" for when the user opens the web interface but
+hasn't selected a node yet. It could either default to the controller node, or
+display a message that says "please select a node above" and some other stuff.
+
+Page loading takes a while each time a form is submitted. It would be a good
+idea to use JavaScript each time a "submit" button is pressed to disable all
+form inputs and display some sort of "loading" animation.
+
+After a control is processed, it would be nice if all the parameters weren't
+still in the URL (in case the user hits reload in the browser). This could be
+solved by making a redirect after processing -- redirect to "?node=X" where X
+is the current node's id.
